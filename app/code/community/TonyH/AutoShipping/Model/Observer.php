@@ -8,30 +8,33 @@ class TonyH_AutoShipping_Model_Observer {
         $quote = $checkout->getQuote();
         $shippingAddress = $quote->getShippingAddress();
         
+        //first use the default Country code
+        $country = Mage::getStoreConfig('general/country/default');
+
+        //check if the customer has logged in
+        if (Mage::getSingleton('customer/session')->isLoggedIn()) {
+            $customer = Mage::getSingleton('customer/session')->getCustomer();
+            if ($customer->getPrimaryShippingAddress() && $customer->getPrimaryShippingAddress()->getCountry()) {
+                //use customer's shipping address country if there's one
+                $country = $customer->getPrimaryShippingAddress()->getCountry();
+            }
+        }
+       
+        //only set country if it does not exists already
+        if (!$shippingAddress->getCountryId()) {
+            $shippingAddress->setCountryId($country);
+        }
+
         //allow shipping rates recalculation
         $shippingAddress->setCollectShippingRates(true);
         
+
         //rest qutoe item counts so that shipping calculation is based on the correct quantity
         $quote->collectTotals();
         
+        $shippingAddress->collectShippingRates();
+
         if ($quote->getItemsCount()) {
-
-            //first use the default Country code
-            $country = Mage::getStoreConfig('general/country/default');
-
-            //check if the customer has logged in
-            if (Mage::getSingleton('customer/session')->isLoggedIn()) {
-                $customer = Mage::getSingleton('customer/session')->getCustomer();
-                if ($customer->getPrimaryShippingAddress() && $customer->getPrimaryShippingAddress()->getCountry()) {
-                    //use customer's shipping address country if there's one
-                    $country = $customer->getPrimaryShippingAddress()->getCountry();
-                }
-            }
-
-            //only set country if it does not exists already
-            if (!$shippingAddress->getCountryId()) {
-                $shippingAddress->setCountryId($country);
-            }
 
             //get available rates
             $rates = $shippingAddress->getGroupedAllShippingRates();
@@ -43,7 +46,7 @@ class TonyH_AutoShipping_Model_Observer {
                 $rateToApply = $topRate[0]->getCode();
 
                 try {
-                    
+
                     //apply shipping
                     $shippingAddress->setShippingMethod($rateToApply);
                     $quote->save();

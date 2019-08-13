@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>autoshipping</name>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
     <stability>stable</stability>
     <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
@@ -35,12 +35,13 @@ Shipping rates will get recalculated when the customer:&#xD;
 add items to cart&#xD;
 update items in cart&#xD;
 remove items from cart</description>
-    <notes>First Release.&#xD;
-Tested under CE 1.7</notes>
+    <notes>Stable release&#xD;
+&#xD;
+Tested under Magent CE 1.7, 1.6.2, 1.6, 1.5.1</notes>
     <authors><author><name>Tony Hou</name><user>tony2523</user><email>t@tonyhou.com</email></author></authors>
-    <date>2012-06-09</date>
-    <time>16:15:14</time>
-    <contents><target name="magecommunity"><dir name="TonyH"><dir name="AutoShipping"><dir name="Model"><file name="Observer.php" hash="09960487de4c45684bcea027cacc954b"/></dir><dir name="etc"><file name="config.xml" hash="030bff6fb5a13927164d4928979ec6c8"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="TonyH_AutoShipping.xml" hash="37a3f804f1e14b7c72a9dede8f455fcf"/></dir></target></contents>
+    <date>2012-06-10</date>
+    <time>10:20:18</time>
+    <contents><target name="magecommunity"><dir name="TonyH"><dir name="AutoShipping"><dir name="Model"><file name="Observer.php" hash="488cec0f1537369ec0eda07272fa9196"/></dir><dir name="etc"><file name="config.xml" hash="030bff6fb5a13927164d4928979ec6c8"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="TonyH_AutoShipping.xml" hash="37a3f804f1e14b7c72a9dede8f455fcf"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>
