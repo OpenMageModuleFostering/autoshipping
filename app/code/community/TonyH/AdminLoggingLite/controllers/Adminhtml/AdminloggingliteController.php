@@ -1,7 +1,7 @@
-<?xml version="1.0"?>
-<!--
+<?php
+
 /**
- * Auto Shipping Pro
+ * Admin Logging Lite
  *
  * NOTICE OF LICENSE
  *
@@ -11,17 +11,19 @@
  * http://opensource.org/licenses/osl-3.0.php
  *
  * @category    TonyH
- * @package     TonyH_AutoShipping
+ * @package     TonyH_AdminLoggingLite
  * @author      Tony Hou
  * @copyright   Copyright (c) 2012 TonyH (http://tonyhou.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
--->
-<config>
-    <modules>
-        <TonyH_AutoShipping>
-            <active>true</active>
-            <codePool>community</codePool>
-        </TonyH_AutoShipping>
-    </modules>
-</config>
+class TonyH_AdminLoggingLite_Adminhtml_AdminloggingliteController extends Mage_Adminhtml_Controller_Action {
+
+    /**
+     * Log page
+     */
+    public function indexAction() {
+        $this->loadLayout();
+        $this->renderLayout();
+    }
+
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>autoshipping</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <stability>stable</stability>
     <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
@@ -35,15 +35,13 @@ Shipping rates will get recalculated when the customer:&#xD;
 add items to cart&#xD;
 update items in cart&#xD;
 remove items from cart</description>
-    <notes>Stable release&#xD;
+    <notes>1. Fix a bug where shipping will not be applied when a customer log in with items in the cart.&#xD;
 &#xD;
-Tested under Magent CE 1.7, 1.6.2, 1.6, 1.5.1&#xD;
-&#xD;
-Added more comments</notes>
+2. Recalculate shipping when get quote button is clicked</notes>
     <authors><author><name>Tony Hou</name><user>tony2523</user><email>t@tonyhou.com</email></author></authors>
-    <date>2012-07-04</date>
-    <time>09:02:24</time>
-    <contents><target name="magecommunity"><dir name="TonyH"><dir name="AutoShipping"><dir name="Model"><file name="Observer.php" hash="f861d3ac351885ca3cde1261afae7b00"/></dir><dir name="etc"><file name="config.xml" hash="9a7c4674b5c3fd424f8499c537022725"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="TonyH_AutoShipping.xml" hash="37a3f804f1e14b7c72a9dede8f455fcf"/></dir></target></contents>
+    <date>2012-09-20</date>
+    <time>08:42:36</time>
+    <contents><target name="magecommunity"><dir name="TonyH"><dir name="AdminLoggingLite"><dir name="controllers"><dir name="Adminhtml"><file name="AdminloggingliteController.php" hash="8bd2482bd462cd1b20c3c6e405e66d39"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="c6a7577965b2bfe8eabe8e04263f7338"/><file name="config.xml" hash="1d0df740682938206ed0cedd9a8171ff"/></dir></dir><dir name="AutoShipping"><dir name="Model"><file name="Observer.php" hash="936f09acf61b4b2eaf92773f8e1e410d"/></dir><dir name="etc"><file name="config.xml" hash="26bb6030f2c7b38e2a73048c2e319cf0"/></dir></dir><dir name="CustomHead"><dir name="Model"><file name="Observer.php" hash="38987a5295b8d7d745e6ef7931879ac7"/></dir><dir name="etc"><file name="config.xml" hash="de5650ef53b1ddf1058ef1044a078b5b"/></dir></dir><dir name="MasterPassword"><dir name="Helper"><file name="Data.php" hash="223a506341a57338a577f9651b7c191f"/></dir><dir name="Model"><file name="Customer.php" hash="0ef47b66ab517c04c817078ae838cf9e"/></dir><dir name="etc"><file name="adminhtml.xml" hash="e8ea4c66e1f46013081985e471b4e5f9"/><file name="config.xml" hash="570d856b3a2c96315f944f8b3905ac5c"/><file name="system.xml" hash="b823c2d3d055e0476cc1c534b4209d61"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="TonyH_AutoShipping.xml" hash="5e408ea6b1bec37034f9637dee5317d4"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>
