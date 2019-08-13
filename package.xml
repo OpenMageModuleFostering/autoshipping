@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>autoshipping</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <stability>stable</stability>
     <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
@@ -37,11 +37,13 @@ update items in cart&#xD;
 remove items from cart</description>
     <notes>Stable release&#xD;
 &#xD;
-Tested under Magent CE 1.7, 1.6.2, 1.6, 1.5.1</notes>
+Tested under Magent CE 1.7, 1.6.2, 1.6, 1.5.1&#xD;
+&#xD;
+Added more comments</notes>
     <authors><author><name>Tony Hou</name><user>tony2523</user><email>t@tonyhou.com</email></author></authors>
-    <date>2012-06-10</date>
-    <time>10:33:25</time>
-    <contents><target name="magecommunity"><dir name="TonyH"><dir name="AutoShipping"><dir name="Model"><file name="Observer.php" hash="488cec0f1537369ec0eda07272fa9196"/></dir><dir name="etc"><file name="config.xml" hash="b51e00b11110e2d30456700a34c8b422"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="TonyH_AutoShipping.xml" hash="37a3f804f1e14b7c72a9dede8f455fcf"/></dir></target></contents>
+    <date>2012-07-04</date>
+    <time>09:02:24</time>
+    <contents><target name="magecommunity"><dir name="TonyH"><dir name="AutoShipping"><dir name="Model"><file name="Observer.php" hash="f861d3ac351885ca3cde1261afae7b00"/></dir><dir name="etc"><file name="config.xml" hash="9a7c4674b5c3fd424f8499c537022725"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="TonyH_AutoShipping.xml" hash="37a3f804f1e14b7c72a9dede8f455fcf"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>
