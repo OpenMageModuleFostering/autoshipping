@@ -1,19 +1,5 @@
 {
-    "name": "OpenMageModuleFostering/autoshipping",
-    "type": "magento-module",
-    "license": "OSL-v3.0",
-    "homepage": "",
-    "description": "Automatically apply shipping when customers:
-add items to cart,
-update items in cart,
-remove items from cart",
-    "authors": [
-    {
-        "name": "Tony Hou",
-        "email": "t@tonyhou.com"
-    }
-],
-    "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+    "keywords": [
+        "openmage-module"
+    ]
 }
